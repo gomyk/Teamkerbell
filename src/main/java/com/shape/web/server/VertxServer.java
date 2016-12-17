@@ -117,7 +117,7 @@ public class VertxServer extends DefaultEmbeddableVerticle {
             }); //Msg End
 
             socket.on("file", event -> {
-                // msg = 파일이름
+                // msg = 합성첨가물
                 ServerUser su = Clients.get(socket.getId());
                 String projectIdx = su.getProjectIdx();
                 event.putString("img", su.getImg());
